@@ -161,12 +161,12 @@ export default {
         href: "breadcrumbs_home"
       },
       {
-        text: "Clothing",
+        text: "Offices",
         disabled: false,
         href: "breadcrumbs_clothing"
       },
       {
-        text: "T-Shirts",
+        text: "Resorts",
         disabled: true,
         href: "breadcrumbs_shirts"
       }
@@ -176,21 +176,21 @@ export default {
     items: [
       {
         id: 2,
-        name: "Shoes",
+        name: "Offices",
         children: [
-          { id: 2, name: "Casuals" },
-          { id: 3, name: "Formals" },
-          { id: 4, name: "Sneakers" }
+          { id: 2, name: "Formal" },
+          { id: 3, name: "Relax" },
+          { id: 4, name: "Casual" }
         ]
       },
       {
         id: 1,
-        name: "Clothing",
+        name: "Resort",
         children: [
-          { id: 5, name: "Shirts" },
-          { id: 6, name: "Tops" },
-          { id: 7, name: "Tunics" },
-          { id: 8, name: "Bodysuit" }
+          { id: 5, name: "Tokyo" },
+          { id: 6, name: "New York" },
+          { id: 7, name: "London" },
+          { id: 8, name: "Berlin" }
         ]
       }
     ],
