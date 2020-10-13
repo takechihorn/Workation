@@ -76,35 +76,69 @@ export const user = {
           })
         })
     },
-    // アラートメッセージ
-    alertMessage({
-      commit
-    }, {
-      errorCode,
-      errorMessage
-    }) {
-      switch (errorCode) {
-        case 'auth/wrong-password':
-          alert('パスワードが違います')
-          break
-        case 'auth/invalid-email':
-          alert('無効のメールアドレスです')
-          break
-        case 'auth/user-not-found':
-          alert('ユーザーが存在しません')
-          break
-        case 'auth/weak-password':
-          alert('6文字以上でパスワードを設定してください')
-          break
-        case 'auth/email-already-in-use':
-          alert('すでに存在しているメールアドレスです')
-          break
-        default:
-          alert(errorMessage)
-          break
+    async handleResetPassword() {
+      this.isLoading = true;
+
+      try {
+        // コードの確認
+        const email = await firebase.auth().verifyPasswordResetCode(this.oobCode);
+
+        // TODO: 新パスワード入力のUIをvueで表示する
+
+      } catch (e) {
+        console.error(e);
       }
     }
+  },
+
+  // アラートメッセージ
+  alertMessage({
+    commit
+  }, {
+    errorCode,
+    errorMessage
+  }) {
+    switch (errorCode) {
+      case 'auth/wrong-password':
+        alert('パスワードが違います')
+        break
+      case 'auth/invalid-email':
+        alert('無効のメールアドレスです')
+        break
+      case 'auth/user-not-found':
+        alert('ユーザーが存在しません')
+        break
+      case 'auth/weak-password':
+        alert('6文字以上でパスワードを設定してください')
+        break
+      case 'auth/email-already-in-use':
+        alert('すでに存在しているメールアドレスです')
+        break
+      default:
+        alert(errorMessage)
+        break
+    }
+  },
+  async loginFacebook({
+    dispatch
+  }) {
+    var provider = new firebase.auth.FacebookAuthProvider()
+    firebase.auth().signInWithPopup(provider).catch(function (error) {
+      console.log(error)
+    })
+  },
+  async loginGoogle({
+    dispatch
+  }) {
+    var provider = new firebase.auth.GoogleAuthProvider()
+    firebase.auth().signInWithPopup(provider).catch(function (error) {
+      console.log(error)
+    })
+  },
+  logout() {
+    firebase.auth().signOut()
   }
 }
+
 
 export default user

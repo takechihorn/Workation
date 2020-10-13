@@ -1,4 +1,5 @@
 import colors from 'vuetify/es5/util/colors'
+import webpack from 'webpack'
 
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
@@ -66,5 +67,15 @@ export default {
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
-  build: {}
+  build: {
+    /*
+     ** You can extend webpack config here
+     */
+    extend(config, ctx) {},
+    plugins: [
+      new webpack.ProvidePlugin({
+        _: 'lodash'
+      })
+    ]
+  }
 }

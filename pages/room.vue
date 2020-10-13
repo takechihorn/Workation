@@ -61,13 +61,13 @@
             <v-divider></v-divider>
             <v-card-title class="pb-0">Size</v-card-title>
             <v-container class="pt-0" fluid>
-              <v-checkbox label="XS" hide-details dense></v-checkbox>
-              <v-checkbox label="S" hide-details dense></v-checkbox>
-              <v-checkbox label="M" hide-details dense></v-checkbox>
-              <v-checkbox label="L" hide-details dense></v-checkbox>
-              <v-checkbox label="XL" hide-details dense></v-checkbox>
-              <v-checkbox label="XXL" hide-details dense></v-checkbox>
-              <v-checkbox label="XXXL" hide-details dense></v-checkbox>
+              <v-checkbox label="rapid WiFi" hide-details dense></v-checkbox>
+              <v-checkbox label="near Station" hide-details dense></v-checkbox>
+              <v-checkbox label="Deals" hide-details dense></v-checkbox>
+              <v-checkbox label="Under 3000yen" hide-details dense></v-checkbox>
+              <v-checkbox label="Under 5000yen" hide-details dense></v-checkbox>
+              <v-checkbox label="Under 7000yen" hide-details dense></v-checkbox>
+              <v-checkbox label="Under 10000yen" hide-details dense></v-checkbox>
             </v-container>
           </v-card>
         </div>

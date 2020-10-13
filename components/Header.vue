@@ -17,7 +17,7 @@
         class="hidden-sm-and-down pl-10 ml-4"
       />
       <v-spacer />
-      <v-btn href="/login" icon>
+      <v-btn href="/personal" icon>
         <v-icon>mdi-account-circle</v-icon>
       </v-btn>
       <!-- <v-btn v-on="on" icon>
@@ -48,9 +48,6 @@
             </v-list-item>
           </v-card>
         </v-menu>
-        <a href="/product" class="v-btn">
-          <span>Product</span>
-        </a>
         <v-btn href="/register">
           <span>Register</span>
         </v-btn>
@@ -58,8 +55,9 @@
           <span>Login</span>
         </v-btn>
       </v-bottom-navigation>
+      <v-spacer></v-spacer>
+      <nuxt />
     </v-main>
-    <nuxt />
   </v-app>
 </template>
 <script>
@@ -67,11 +65,11 @@ export default {
   data() {
     return {
       items: [
-        { title: "T-Shirts" },
-        { title: "Jackets" },
-        { title: "Shirts" },
-        { title: "Jeans" },
-        { title: "Shoes" }
+        { title: "Tokyo" },
+        { title: "New York" },
+        { title: "London" },
+        { title: "Berlin" },
+        { title: "Beijing" }
       ],
       activeBtn: 1
     };
